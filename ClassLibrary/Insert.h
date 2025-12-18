@@ -1,32 +1,32 @@
-#pragma once
+п»ї#pragma once
 #include "Exercise.h"
 #include "Matrix.h"
 /**
- * @brief упражнение 2
+ * @brief СѓРїСЂР°Р¶РЅРµРЅРёРµ 2
  */
 class Insert :
     public Exercise
 {
 public:
     /**
-    * @brief конструктор
-    * @param array массив
-    * @param gen генератор
+    * @brief РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ
+    * @param array РјР°СЃСЃРёРІ
+    * @param gen РіРµРЅРµСЂР°С‚РѕСЂ
     */
     Insert(Matrix<int>& array, Generator& gen);
     void showArray();
     /**
-    * @brief вставляет элемент в массив
-    * @param index индекс элемента массива
-    * @param value значение элемента
+    * @brief РІСЃС‚Р°РІР»СЏРµС‚ СЌР»РµРјРµРЅС‚ РІ РјР°СЃСЃРёРІ
+    * @param index РёРЅРґРµРєСЃ СЌР»РµРјРµРЅС‚Р° РјР°СЃСЃРёРІР°
+    * @param value Р·РЅР°С‡РµРЅРёРµ СЌР»РµРјРµРЅС‚Р°
     */
     void elementInsertion(size_t index,const int value);
     /**
-    * @brief вставляет в массив по одному элементу равному последней цифре элемента массива сздади и спереди
+    * @brief РІСЃС‚Р°РІР»СЏРµС‚ РІ РјР°СЃСЃРёРІ РїРѕ РѕРґРЅРѕРјСѓ СЌР»РµРјРµРЅС‚Сѓ СЂР°РІРЅРѕРјСѓ РїРѕСЃР»РµРґРЅРµР№ С†РёС„СЂРµ СЌР»РµРјРµРЅС‚Р° РјР°СЃСЃРёРІР° СЃР·РґР°РґРё Рё СЃРїРµСЂРµРґРё
     */
     void Task1() override;
     /**
-    * @brief реализация интерфейса
+    * @brief СЂРµР°Р»РёР·Р°С†РёСЏ РёРЅС‚РµСЂС„РµР№СЃР°
     */
     void Task2() override;
 };

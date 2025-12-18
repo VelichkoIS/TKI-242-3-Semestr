@@ -1,9 +1,9 @@
-#pragma once
+п»ї#pragma once
 #include "Generator.h"
 #include <iostream>
 
 /**
-* @brief генератор чисел читающий числа из потока ввода
+* @brief РіРµРЅРµСЂР°С‚РѕСЂ С‡РёСЃРµР» С‡РёС‚Р°СЋС‰РёР№ С‡РёСЃР»Р° РёР· РїРѕС‚РѕРєР° РІРІРѕРґР°
 */
 class IStreamGenerator : public Generator
 {
@@ -11,12 +11,12 @@ private:
 	std::istream& in;
 public:
 	/**
-	* @brief конструктор
-	* @param in поток ввода
+	* @brief РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ
+	* @param in РїРѕС‚РѕРє РІРІРѕРґР°
 	*/
 	IStreamGenerator(std::istream& in = std::cin);
 	/**
-	* @brief возвращает значение введенное в потоке ввода
+	* @brief РІРѕР·РІСЂР°С‰Р°РµС‚ Р·РЅР°С‡РµРЅРёРµ РІРІРµРґРµРЅРЅРѕРµ РІ РїРѕС‚РѕРєРµ РІРІРѕРґР°
 	*/
 	int generate() override;
 };

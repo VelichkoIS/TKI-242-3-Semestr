@@ -1,11 +1,11 @@
-#pragma once
+п»ї#pragma once
 #include <iostream>
 #include <string>
 #include <memory>
 using namespace std;
 
 /**
-* @brief шаблон одномерного массива
+* @brief С€Р°Р±Р»РѕРЅ РѕРґРЅРѕРјРµСЂРЅРѕРіРѕ РјР°СЃСЃРёРІР°
 */
 template<class C1>
 class Matrix
@@ -15,14 +15,14 @@ private:
 	shared_ptr<C1[]> firstPtr;
 public:
 	/**
-	* @brief конструктор по умолчанию
+	* @brief РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ
 	*/
 	Matrix() : size{ 0 }, firstPtr{ nullptr }
 	{
 	}
 	/**
-	* @brief конструктор копирования
-	* @param other другой объект класса Matrix
+	* @brief РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ РєРѕРїРёСЂРѕРІР°РЅРёСЏ
+	* @param other РґСЂСѓРіРѕР№ РѕР±СЉРµРєС‚ РєР»Р°СЃСЃР° Matrix
 	*/
 	Matrix(const Matrix& other) : size{ other.size }
 	{
@@ -33,16 +33,16 @@ public:
 		}
 	}
 	/**
-	* @brief конструктор
-	* @parak size размер массива
+	* @brief РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ
+	* @parak size СЂР°Р·РјРµСЂ РјР°СЃСЃРёРІР°
 	*/
 	Matrix(const size_t& size) : size{ size }
 	{
 		firstPtr.reset(new C1[size]);
 	}
 	/**
-	* @brief констукор перемещения
-	* @param other другой объект класса Matrix
+	* @brief РєРѕРЅСЃС‚СѓРєРѕСЂ РїРµСЂРµРјРµС‰РµРЅРёСЏ
+	* @param other РґСЂСѓРіРѕР№ РѕР±СЉРµРєС‚ РєР»Р°СЃСЃР° Matrix
 	*/
 	Matrix(Matrix&& other) noexcept : size{ other.size }
 	{
@@ -51,42 +51,42 @@ public:
 		other.firstPtr = nullptr;
 	}
 	/**
-	* @brief устанавливает значение поля size
-	* @param size размер массива
+	* @brief СѓСЃС‚Р°РЅР°РІР»РёРІР°РµС‚ Р·РЅР°С‡РµРЅРёРµ РїРѕР»СЏ size
+	* @param size СЂР°Р·РјРµСЂ РјР°СЃСЃРёРІР°
 	*/
 	void setSize(const size_t size)
 	{
 		this->size = size;
 	};
 	/**
-	* @brief устанавливает значение firstPtr
-	* @param arr указатель на первый элемент массива
+	* @brief СѓСЃС‚Р°РЅР°РІР»РёРІР°РµС‚ Р·РЅР°С‡РµРЅРёРµ firstPtr
+	* @param arr СѓРєР°Р·Р°С‚РµР»СЊ РЅР° РїРµСЂРІС‹Р№ СЌР»РµРјРµРЅС‚ РјР°СЃСЃРёРІР°
 	*/
 	void setFirstPtr(const shared_ptr<C1[]> firstPtr)
 	{
 		this->firstPtr = firstPtr;
 	};
 	/**
-	* @brief возвращает значение поля size
+	* @brief РІРѕР·РІСЂР°С‰Р°РµС‚ Р·РЅР°С‡РµРЅРёРµ РїРѕР»СЏ size
 	*/
 	size_t getSize() const
 	{
 		return size;
 	};
 	/**
-	* @brief возвращает значение поля firstPtr
+	* @brief РІРѕР·РІСЂР°С‰Р°РµС‚ Р·РЅР°С‡РµРЅРёРµ РїРѕР»СЏ firstPtr
 	*/
 	shared_ptr<C1[]> getFirstPtr()
 	{
 		return firstPtr;
 	};
 	/**
-	* @brief сериализация в строку
+	* @brief СЃРµСЂРёР°Р»РёР·Р°С†РёСЏ РІ СЃС‚СЂРѕРєСѓ
 	*/
 	string toString() const
 	{
 		stringstream ss;
-		ss << "Размер массива: " + to_string(size) + endl;
+		ss << "Р Р°Р·РјРµСЂ РјР°СЃСЃРёРІР°: " + to_string(size) + endl;
 		for (size_t i = 0; i < size; i++)
 		{
 			ss << firstPtr[i] << endl;
@@ -94,12 +94,12 @@ public:
 		return ss.str();
 	};
 	/**
-	* @brief деструктор
+	* @brief РґРµСЃС‚СЂСѓРєС‚РѕСЂ
 	*/
 	~Matrix() {};
 	/**
-	* @brief оператор присваивания
-	* @param other другой объект класса Matrix
+	* @brief РѕРїРµСЂР°С‚РѕСЂ РїСЂРёСЃРІР°РёРІР°РЅРёСЏ
+	* @param other РґСЂСѓРіРѕР№ РѕР±СЉРµРєС‚ РєР»Р°СЃСЃР° Matrix
 	*/
 	Matrix& operator=(const Matrix& other)
 	{
@@ -112,8 +112,8 @@ public:
 		return *this;
 	};
 	/**
-	* @brief оператор перемещения
-	* @param константная rvalue ссылка на объект класса Matrix
+	* @brief РѕРїРµСЂР°С‚РѕСЂ РїРµСЂРµРјРµС‰РµРЅРёСЏ
+	* @param РєРѕРЅСЃС‚Р°РЅС‚РЅР°СЏ rvalue СЃСЃС‹Р»РєР° РЅР° РѕР±СЉРµРєС‚ РєР»Р°СЃСЃР° Matrix
 	*/
 	Matrix& operator=(Matrix&& other)
 	{
@@ -123,31 +123,31 @@ public:
 		return *this;
 	};
 	/**
-	* @brief оператор разыменовывания элемента коллекции по индексу
-	* @param index индекс элемента
+	* @brief РѕРїРµСЂР°С‚РѕСЂ СЂР°Р·С‹РјРµРЅРѕРІС‹РІР°РЅРёСЏ СЌР»РµРјРµРЅС‚Р° РєРѕР»Р»РµРєС†РёРё РїРѕ РёРЅРґРµРєСЃСѓ
+	* @param index РёРЅРґРµРєСЃ СЌР»РµРјРµРЅС‚Р°
 	*/
 	C1& operator[](const size_t index) const
 	{
 		return firstPtr[index];
 	};
 	/**
-	* @brief оператор вывода в ostream
-	* @param os поток вывода
-	* @param value данные для вывода
+	* @brief РѕРїРµСЂР°С‚РѕСЂ РІС‹РІРѕРґР° РІ ostream
+	* @param os РїРѕС‚РѕРє РІС‹РІРѕРґР°
+	* @param value РґР°РЅРЅС‹Рµ РґР»СЏ РІС‹РІРѕРґР°
 	*/
 	friend ostream& operator<<(ostream& os, const Matrix<C1>& value);
 	/**
-	* @brief оператор ввода в istream
-	* @param is поток ввода
-	* @param value вводимые данные
+	* @brief РѕРїРµСЂР°С‚РѕСЂ РІРІРѕРґР° РІ istream
+	* @param is РїРѕС‚РѕРє РІРІРѕРґР°
+	* @param value РІРІРѕРґРёРјС‹Рµ РґР°РЅРЅС‹Рµ
 	*/
 	friend istream& operator>>(istream& is, Matrix<C1>& matrix);
 };
 
 /**
-* @brief оператор вывода в поток
-* @param os поток вывода
-* @param value значение
+* @brief РѕРїРµСЂР°С‚РѕСЂ РІС‹РІРѕРґР° РІ РїРѕС‚РѕРє
+* @param os РїРѕС‚РѕРє РІС‹РІРѕРґР°
+* @param value Р·РЅР°С‡РµРЅРёРµ
 */
 template<class C1>
 ostream& operator<<(ostream& os, const Matrix<C1>& value)
@@ -157,9 +157,9 @@ ostream& operator<<(ostream& os, const Matrix<C1>& value)
 };
 
 /**
-* @brief оператор ввода
-* @param is поток ввода
-* @param matrix массив куда будут передоваться данные
+* @brief РѕРїРµСЂР°С‚РѕСЂ РІРІРѕРґР°
+* @param is РїРѕС‚РѕРє РІРІРѕРґР°
+* @param matrix РјР°СЃСЃРёРІ РєСѓРґР° Р±СѓРґСѓС‚ РїРµСЂРµРґРѕРІР°С‚СЊСЃСЏ РґР°РЅРЅС‹Рµ
 */
 template<class C1>
 istream& operator>>(istream& is, Matrix<C1>& matrix)

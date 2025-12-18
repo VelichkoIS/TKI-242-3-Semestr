@@ -1,15 +1,15 @@
-#pragma once
+п»ї#pragma once
 #include "Generator.h"
 #include "Matrix.h"
 /**
-* @brief генератор чисел заполняющий массив нулями
+* @brief РіРµРЅРµСЂР°С‚РѕСЂ С‡РёСЃРµР» Р·Р°РїРѕР»РЅСЏСЋС‰РёР№ РјР°СЃСЃРёРІ РЅСѓР»СЏРјРё
 */
 class FWZeroes :
     public Generator
 { 
     public:
     /**
-    * @brief возвращает ноль
+    * @brief РІРѕР·РІСЂР°С‰Р°РµС‚ РЅРѕР»СЊ
     */
     int generate() override;
 };

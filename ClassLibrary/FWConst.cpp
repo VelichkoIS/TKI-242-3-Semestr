@@ -1,4 +1,4 @@
-#include "FWConst.h"
+﻿#include "FWConst.h"
 
 FWConst::FWConst(const int value) : value{value}
 {
