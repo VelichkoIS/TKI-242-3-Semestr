@@ -43,6 +43,41 @@ namespace UnitTests
 			Sale sale(medicine);
 			IsTrue(sale.getName() == medicine.getName() && sale.getMedicine() == medicine);
 		}
-
+		TEST_METHOD(isWithInTheLastWeekTest)
+		{
+			time_t now = time(nullptr);
+			time_t time1 = now - 6 * 24 * 60 * 60;
+			time_t time2 = now - 8 * 24 * 60 * 60;
+			Medicine medicine("Зиртек", "Таблеточная", "28.02.2029", "Использовать по назначению", 500.0, "Компания1", "аллергия");
+			Sale sale1(medicine);
+			sale1.setTimeOfSale(time1);
+			Sale sale2(medicine);
+			sale2.setTimeOfSale(time2);
+			IsTrue(sale1.isWithinLastWeek() == true && sale2.isWithinLastWeek() == false);
+		}
+		TEST_METHOD(isWithInTheLastMounthTest)
+		{
+			time_t now = time(nullptr);
+			time_t time1 = now - 4 * 6 * 24 * 60 * 60;
+			time_t time2 = now - 4 * 8 * 24 * 60 * 60;
+			Medicine medicine("Зиртек", "Таблеточная", "28.02.2029", "Использовать по назначению", 500.0, "Компания1", "аллергия");
+			Sale sale1(medicine);
+			sale1.setTimeOfSale(time1);
+			Sale sale2(medicine);
+			sale2.setTimeOfSale(time2);
+			IsTrue(sale1.isWithinLastMounth() == true && sale2.isWithinLastMounth() == false);
+		}
+		TEST_METHOD(isWithInTheLastYearTest)
+		{
+			time_t now = time(nullptr);
+			time_t time1 = now - 12 * 4 * 6 * 24 * 60 * 60;
+			time_t time2 = now - 12 * 4 * 8 * 24 * 60 * 60;
+			Medicine medicine("Зиртек", "Таблеточная", "28.02.2029", "Использовать по назначению", 500.0, "Компания1", "аллергия");
+			Sale sale1(medicine);
+			sale1.setTimeOfSale(time1);
+			Sale sale2(medicine);
+			sale2.setTimeOfSale(time2);
+			IsTrue(sale1.isWithinLastYear() == true && sale2.isWithinLastYear() == false);
+		}
 	};
 }

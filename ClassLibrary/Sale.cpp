@@ -14,6 +14,11 @@ Medicine Sale::getMedicine()
 	return medicine;
 }
 
+void Sale::setTimeOfSale(std::time_t time)
+{
+	timeOfSale = time;
+}
+
 bool Sale::isWithinLastWeek()
 {
 	time_t now = time(nullptr);

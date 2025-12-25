@@ -25,6 +25,10 @@ public:
 	*/
 	Medicine getMedicine();
 	/**
+	* @brief устанвливает время продажи
+	*/
+	void setTimeOfSale(std::time_t time);
+	/**
 	* @brief метод подтверждает или опровергает была ли совершена покупка неделю назад
 	*/
 	bool isWithinLastWeek();
