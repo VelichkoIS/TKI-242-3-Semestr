@@ -1,4 +1,4 @@
-#include "InquiryOffice.h"
+ï»¿#include "InquiryOffice.h"
 #include <iostream>
 
 InquiryOffice::InquiryOffice() : inStock{}, sales {}
@@ -21,11 +21,11 @@ void InquiryOffice::showInformation(std::string name)
 	{
 		if (inStock[i].getName() == name)
 		{
-			std::cout << "Èíôîðìàöèÿ î ïðåïàðàòå " << inStock[i].getName() << std::endl;
-			std::cout << "Ôîðìà âûïóñêà: " << inStock[i].getFormOfIssue() << std::endl;
-			std::cout << "Àííîòàöèÿ: " << inStock[i].getAnnotation() << std::endl;
-			std::cout << "Ñðîê ãîäíîñòè: " << inStock[i].getExpirationDate() << std::endl;
-			std::cout << "Ïðîèçâîäèòåëü: " << inStock[i].getManufacturer() << std::endl;
+			std::cout << "Ð˜Ð½Ñ„Ð¾Ñ€Ð¼Ð°Ñ†Ð¸Ñ Ð¾ Ð¿Ñ€ÐµÐ¿Ð°Ñ€Ð°Ñ‚Ðµ " << inStock[i].getName() << std::endl;
+			std::cout << "Ð¤Ð¾Ñ€Ð¼Ð° Ð²Ñ‹Ð¿ÑƒÑÐºÐ°: " << inStock[i].getFormOfIssue() << std::endl;
+			std::cout << "ÐÐ½Ð½Ð¾Ñ‚Ð°Ñ†Ð¸Ñ: " << inStock[i].getAnnotation() << std::endl;
+			std::cout << "Ð¡Ñ€Ð¾Ðº Ð³Ð¾Ð´Ð½Ð¾ÑÑ‚Ð¸: " << inStock[i].getExpirationDate() << std::endl;
+			std::cout << "ÐŸÑ€Ð¾Ð¸Ð·Ð²Ð¾Ð´Ð¸Ñ‚ÐµÐ»ÑŒ: " << inStock[i].getManufacturer() << std::endl;
 		}
 	}
 }
@@ -43,7 +43,7 @@ void InquiryOffice::showMedicine(std::string illness)
 	}
 	if (counter == 0)
 	{
-		std::cout << "Ëåêàðñòâ îò äàííîé áîëåçíè íåòó â íàëè÷èè" << std::endl;
+		std::cout << "Ð›ÐµÐºÐ°Ñ€ÑÑ‚Ð² Ð¾Ñ‚ Ð´Ð°Ð½Ð½Ð¾Ð¹ Ð±Ð¾Ð»ÐµÐ·Ð½Ð¸ Ð½ÐµÑ‚Ñƒ Ð² Ð½Ð°Ð»Ð¸Ñ‡Ð¸Ð¸" << std::endl;
 	}
 }
 
@@ -62,9 +62,9 @@ Medicine InquiryOffice::findByName(std::string name)
 
 void InquiryOffice::buy(std::string name)
 {
-	if (findByName(name).getName() == "íå óêàçàííî")
+	if (findByName(name).getName() == "Ð½Ðµ ÑƒÐºÐ°Ð·Ð°Ð½Ð½Ð¾")
 	{
-		std::cout << "Ëåêàðñòâà ñ òàêèì íàçâàíèåì íåò â íàëè÷èè" << std::endl;
+		std::cout << "Ð›ÐµÐºÐ°Ñ€ÑÑ‚Ð²Ð° Ñ Ñ‚Ð°ÐºÐ¸Ð¼ Ð½Ð°Ð·Ð²Ð°Ð½Ð¸ÐµÐ¼ Ð½ÐµÑ‚ Ð² Ð½Ð°Ð»Ð¸Ñ‡Ð¸Ð¸" << std::endl;
 	}
 	else
 	{

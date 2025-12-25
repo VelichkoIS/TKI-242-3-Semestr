@@ -1,7 +1,7 @@
-#pragma once
+п»ї#pragma once
 #include <string>
 	/**
-	* @brief метод возвращает название лекарства
+	* @brief РјРµС‚РѕРґ РІРѕР·РІСЂР°С‰Р°РµС‚ РЅР°Р·РІР°РЅРёРµ Р»РµРєР°СЂСЃС‚РІР°
 	*/
 class Medicine
 {
@@ -15,47 +15,47 @@ private:
 	std::string illness;
 public:
 	/**
-	* @brief конструктор по умолчанию
+	* @brief РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ
 	*/
 	Medicine();
 	/**
-	* @brief конструктор
-	* @param name название лекарства
-	* @param formOfIssue форма выпуска
-	* @param expirationDate срок годности
-	* @param annotation аннотация
-	* @param price цена
-	* @param manufacturer производитель
-	* @param illness болезнь
+	* @brief РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ
+	* @param name РЅР°Р·РІР°РЅРёРµ Р»РµРєР°СЂСЃС‚РІР°
+	* @param formOfIssue С„РѕСЂРјР° РІС‹РїСѓСЃРєР°
+	* @param expirationDate СЃСЂРѕРє РіРѕРґРЅРѕСЃС‚Рё
+	* @param annotation Р°РЅРЅРѕС‚Р°С†РёСЏ
+	* @param price С†РµРЅР°
+	* @param manufacturer РїСЂРѕРёР·РІРѕРґРёС‚РµР»СЊ
+	* @param illness Р±РѕР»РµР·РЅСЊ
 	*/
 	Medicine(const std::string& name, const std::string& formOfIssue, const std::string& expirationDate,
 		const std::string& annotation, const double& price, const std::string& manufacturer, const std::string& illness);
 	/**
-	* @brief метод возвращает название
+	* @brief РјРµС‚РѕРґ РІРѕР·РІСЂР°С‰Р°РµС‚ РЅР°Р·РІР°РЅРёРµ
 	*/
 	std::string getName();
 	/**
-	* @brief метод возвращает форму выпуска
+	* @brief РјРµС‚РѕРґ РІРѕР·РІСЂР°С‰Р°РµС‚ С„РѕСЂРјСѓ РІС‹РїСѓСЃРєР°
 	*/
 	std::string getFormOfIssue();
 	/**
-	* @brief метод возвращает дату истечения срока годности
+	* @brief РјРµС‚РѕРґ РІРѕР·РІСЂР°С‰Р°РµС‚ РґР°С‚Сѓ РёСЃС‚РµС‡РµРЅРёСЏ СЃСЂРѕРєР° РіРѕРґРЅРѕСЃС‚Рё
 	*/
 	std::string getExpirationDate();
 	/**
-	* @brief метод возвращает аннотацию 
+	* @brief РјРµС‚РѕРґ РІРѕР·РІСЂР°С‰Р°РµС‚ Р°РЅРЅРѕС‚Р°С†РёСЋ 
 	*/
 	std::string getAnnotation();
 	/**
-	* @brief метод возвращает цену
+	* @brief РјРµС‚РѕРґ РІРѕР·РІСЂР°С‰Р°РµС‚ С†РµРЅСѓ
 	*/
 	double getPrice();
 	/**
-	* @brief метод возвращает производителя
+	* @brief РјРµС‚РѕРґ РІРѕР·РІСЂР°С‰Р°РµС‚ РїСЂРѕРёР·РІРѕРґРёС‚РµР»СЏ
 	*/
 	std::string getManufacturer();
 	/**
-	* @brief метод возвращает название болезни
+	* @brief РјРµС‚РѕРґ РІРѕР·РІСЂР°С‰Р°РµС‚ РЅР°Р·РІР°РЅРёРµ Р±РѕР»РµР·РЅРё
 	*/
 	std::string getIllness();
 	friend bool operator==(Medicine item1, Medicine item2);

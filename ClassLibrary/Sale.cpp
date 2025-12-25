@@ -1,4 +1,4 @@
-#include "Sale.h"
+﻿#include "Sale.h"
 
 Sale::Sale(Medicine item) : medicine{item}, timeOfSale{time(nullptr)}
 {

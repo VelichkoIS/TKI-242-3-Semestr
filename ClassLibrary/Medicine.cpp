@@ -1,8 +1,8 @@
-#include "Medicine.h"
+п»ї#include "Medicine.h"
 
-Medicine::Medicine() : name{ "не указанно" },
-formOfIssue{ "не указанно" }, expirationDate{ "не указанно" }, annotation{ "не указанно" },
-price{ 0 }, manufacturer{ "не указанно" }, illness{"не указанно"}
+Medicine::Medicine() : name{ "РЅРµ СѓРєР°Р·Р°РЅРЅРѕ" },
+formOfIssue{ "РЅРµ СѓРєР°Р·Р°РЅРЅРѕ" }, expirationDate{ "РЅРµ СѓРєР°Р·Р°РЅРЅРѕ" }, annotation{ "РЅРµ СѓРєР°Р·Р°РЅРЅРѕ" },
+price{ 0 }, manufacturer{ "РЅРµ СѓРєР°Р·Р°РЅРЅРѕ" }, illness{"РЅРµ СѓРєР°Р·Р°РЅРЅРѕ"}
 {}
 
 Medicine::Medicine(const std::string& name, const std::string& formOfIssue, const std::string& expirationDate,

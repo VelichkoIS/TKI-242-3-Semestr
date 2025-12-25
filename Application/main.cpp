@@ -1,4 +1,4 @@
-#include <iostream>
+п»ї#include <iostream>
 #include "C:\Users\1\source\repos\TKI-242-3-Semestr\Pharmacy\ClassLibrary\InquiryOffice.h"
 #include <vector>
 
@@ -6,16 +6,16 @@ int main()
 {
 	setlocale(LC_ALL, "ru");
 	InquiryOffice pharmacy;
-	Medicine item1("Зиртек", "Таблеточная", "28.02.2029", "Использовать по назначению", 500.0, "Компания1", "аллергия");
-	Medicine item2("Цетрин", "Таблеточная", "28.02.2029", "Использовать по назначению", 500.0, "Компания2", "аллергия");
+	Medicine item1("Р—РёСЂС‚РµРє", "РўР°Р±Р»РµС‚РѕС‡РЅР°СЏ", "28.02.2029", "РСЃРїРѕР»СЊР·РѕРІР°С‚СЊ РїРѕ РЅР°Р·РЅР°С‡РµРЅРёСЋ", 500.0, "РљРѕРјРїР°РЅРёСЏ1", "Р°Р»Р»РµСЂРіРёСЏ");
+	Medicine item2("Р¦РµС‚СЂРёРЅ", "РўР°Р±Р»РµС‚РѕС‡РЅР°СЏ", "28.02.2029", "РСЃРїРѕР»СЊР·РѕРІР°С‚СЊ РїРѕ РЅР°Р·РЅР°С‡РµРЅРёСЋ", 500.0, "РљРѕРјРїР°РЅРёСЏ2", "Р°Р»Р»РµСЂРіРёСЏ");
 	pharmacy.addToStock(item1);
 	pharmacy.addToStock(item2);
-	pharmacy.showInformation("Зиртек");
-	pharmacy.buy("Зиртек");
-	pharmacy.buy("Цетрин");
-	std::cout << "Продажи за неделю " << pharmacy.amountOfSalesInLastWeek("Зиртек") << std::endl;
-	std::cout << "Продажи за месяц " << pharmacy.amountOfSalesInLastMounth("Зиртек") << std::endl;
-	std::cout << "Продажи за год " << pharmacy.amountOfSalesInLastYear("Зиртек") << std::endl;
-	std::cout << "Список лекарств от аллергии: ";
-	pharmacy.showMedicine("аллергия");
+	pharmacy.showInformation("Р—РёСЂС‚РµРє");
+	pharmacy.buy("Р—РёСЂС‚РµРє");
+	pharmacy.buy("Р¦РµС‚СЂРёРЅ");
+	std::cout << "РџСЂРѕРґР°Р¶Рё Р·Р° РЅРµРґРµР»СЋ " << pharmacy.amountOfSalesInLastWeek("Р—РёСЂС‚РµРє") << std::endl;
+	std::cout << "РџСЂРѕРґР°Р¶Рё Р·Р° РјРµСЃСЏС† " << pharmacy.amountOfSalesInLastMounth("Р—РёСЂС‚РµРє") << std::endl;
+	std::cout << "РџСЂРѕРґР°Р¶Рё Р·Р° РіРѕРґ " << pharmacy.amountOfSalesInLastYear("Р—РёСЂС‚РµРє") << std::endl;
+	std::cout << "РЎРїРёСЃРѕРє Р»РµРєР°СЂСЃС‚РІ РѕС‚ Р°Р»Р»РµСЂРіРёРё: ";
+	pharmacy.showMedicine("Р°Р»Р»РµСЂРіРёСЏ");
 }
