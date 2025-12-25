@@ -58,5 +58,6 @@ public:
 	* @brief метод возвращает название болезни
 	*/
 	std::string getIllness();
+	friend bool operator==(Medicine item1, Medicine item2);
 };
 

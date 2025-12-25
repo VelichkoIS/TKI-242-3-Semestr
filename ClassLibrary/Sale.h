@@ -21,16 +21,20 @@ public:
 	*/
 	std::string getName();
 	/**
+	* @brief возвращает значение поля medicine
+	*/
+	Medicine getMedicine();
+	/**
 	* @brief метод подтверждает или опровергает была ли совершена покупка неделю назад
 	*/
-	bool isWithinLastWeek() const;
+	bool isWithinLastWeek();
 	/**
 	* @brief метод подтверждает или опровергает была ли совершена покупка месяц назад
 	*/
-	bool isWithinLastMounth() const;
+	bool isWithinLastMounth();
 	/**
 	* @brief метод подтверждает или опровергает была ли совершена покупка год назад
 	*/
-	bool isWithinLastYear() const;
+	bool isWithinLastYear();
 };
 

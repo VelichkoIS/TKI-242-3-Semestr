@@ -47,3 +47,17 @@ std::string Medicine::getIllness()
 {
 	return illness;
 }
+
+bool operator==(Medicine item1, Medicine item2)
+{
+	if (item1.getName() == item2.getName() &&
+		item1.getAnnotation() == item2.getAnnotation() &&
+		item1.getExpirationDate() == item2.getExpirationDate() &&
+		item1.getFormOfIssue() == item2.getFormOfIssue() &&
+		item1.getIllness() == item2.getIllness() &&
+		item1.getPrice() == item2.getPrice() &&
+		item1.getManufacturer() == item2.getManufacturer())
+		return true;
+	else
+		return false;
+}

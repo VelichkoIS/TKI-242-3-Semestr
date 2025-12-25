@@ -1,7 +1,7 @@
 #include "InquiryOffice.h"
 #include <iostream>
 
-InquiryOffice::InquiryOffice() : inStock{}
+InquiryOffice::InquiryOffice() : inStock{}, sales {}
 {
 }
 
@@ -56,12 +56,21 @@ Medicine InquiryOffice::findByName(std::string name)
 			return inStock[i];
 		}
 	}
+	Medicine medicine;
+	return medicine;
 }
 
 void InquiryOffice::buy(std::string name)
 {
-	Sale sale(findByName(name));
-	sales.push_back(sale);
+	if (findByName(name).getName() == "не указанно")
+	{
+		std::cout << "Лекарства с таким названием нет в наличии" << std::endl;
+	}
+	else
+	{
+		Sale sale(findByName(name));
+		sales.push_back(sale);
+	}
 }
 
 int InquiryOffice::amountOfSalesInLastWeek(std::string name)
@@ -95,7 +104,7 @@ int InquiryOffice::amountOfSalesInLastYear(std::string name)
 	int counter = 0;
 	for (size_t i = 0; i < sales.size(); i++)
 	{
-		if (sales[i].getName() == name && sales[i].isWithinLastWeek())
+		if (sales[i].getName() == name && sales[i].isWithinLastYear())
 		{
 			counter++;
 		}
